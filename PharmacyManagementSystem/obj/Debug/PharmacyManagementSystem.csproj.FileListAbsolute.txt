@@ -11,3 +11,16 @@ C:\Users\Blizz\Desktop\Djole\Git\Pharmacy-Management-System\PharmacyManagementSy
 C:\Users\Blizz\Desktop\Djole\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.pdb
 C:\Users\Blizz\Desktop\Djole\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Login.resources
 C:\Users\Blizz\Desktop\Djole\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.MedicineForm.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\bin\Debug\PharmacyManagementSystem.exe.config
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\bin\Debug\PharmacyManagementSystem.exe
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\bin\Debug\PharmacyManagementSystem.pdb
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.csproj.AssemblyReference.cache
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Form1.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Login.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.MedicineForm.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Properties.Resources.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.csproj.GenerateResource.cache
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.csproj.CoreCompileInputs.cache
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.exe
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.pdb
