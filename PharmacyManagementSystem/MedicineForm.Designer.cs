@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.MedicineName = new System.Windows.Forms.TextBox();
             this.BuyPrice = new System.Windows.Forms.TextBox();
             this.Quantity = new System.Windows.Forms.TextBox();
             this.SellPrice = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MedName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedicineGridView = new System.Windows.Forms.DataGridView();
             this.ExpireDate = new System.Windows.Forms.DateTimePicker();
             this.CompanySelect = new System.Windows.Forms.ComboBox();
             this.Add = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.MedicineGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,138 +67,84 @@
             // 
             this.MedicineName.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MedicineName.ForeColor = System.Drawing.Color.DarkGreen;
-            this.MedicineName.Location = new System.Drawing.Point(15, 55);
+            this.MedicineName.Location = new System.Drawing.Point(16, 83);
             this.MedicineName.Margin = new System.Windows.Forms.Padding(2);
             this.MedicineName.Name = "MedicineName";
             this.MedicineName.Size = new System.Drawing.Size(198, 29);
             this.MedicineName.TabIndex = 1;
-            this.MedicineName.Text = "Medicine Name";
             this.MedicineName.TextChanged += new System.EventHandler(this.MedicineName_TextChanged);
             // 
             // BuyPrice
             // 
             this.BuyPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BuyPrice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.BuyPrice.Location = new System.Drawing.Point(15, 88);
+            this.BuyPrice.Location = new System.Drawing.Point(17, 146);
             this.BuyPrice.Margin = new System.Windows.Forms.Padding(2);
             this.BuyPrice.Name = "BuyPrice";
             this.BuyPrice.Size = new System.Drawing.Size(198, 29);
             this.BuyPrice.TabIndex = 1;
-            this.BuyPrice.Text = "Buying Price";
             // 
             // Quantity
             // 
             this.Quantity.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Quantity.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Quantity.Location = new System.Drawing.Point(15, 153);
+            this.Quantity.Location = new System.Drawing.Point(17, 283);
             this.Quantity.Margin = new System.Windows.Forms.Padding(2);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(198, 29);
             this.Quantity.TabIndex = 1;
-            this.Quantity.Text = "Quantity";
             // 
             // SellPrice
             // 
             this.SellPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SellPrice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.SellPrice.Location = new System.Drawing.Point(15, 120);
+            this.SellPrice.Location = new System.Drawing.Point(17, 214);
             this.SellPrice.Margin = new System.Windows.Forms.Padding(2);
             this.SellPrice.Name = "SellPrice";
             this.SellPrice.Size = new System.Drawing.Size(198, 29);
             this.SellPrice.TabIndex = 1;
-            this.SellPrice.Text = "Selling Price";
             // 
-            // dataGridView1
+            // MedicineGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MedName,
-            this.BPrice,
-            this.SPrice,
-            this.Quant,
-            this.ExpDate,
-            this.Company});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.Location = new System.Drawing.Point(271, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(675, 566);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // MedName
-            // 
-            this.MedName.HeaderText = "Medicine";
-            this.MedName.MinimumWidth = 6;
-            this.MedName.Name = "MedName";
-            this.MedName.ToolTipText = "List of medical items";
-            this.MedName.Width = 200;
-            // 
-            // BPrice
-            // 
-            this.BPrice.HeaderText = "Buy Price";
-            this.BPrice.MinimumWidth = 6;
-            this.BPrice.Name = "BPrice";
-            this.BPrice.ToolTipText = "Purchase price of item";
-            this.BPrice.Width = 125;
-            // 
-            // SPrice
-            // 
-            this.SPrice.HeaderText = "Sell Price";
-            this.SPrice.MinimumWidth = 6;
-            this.SPrice.Name = "SPrice";
-            this.SPrice.ToolTipText = "Selling price of item";
-            this.SPrice.Width = 125;
-            // 
-            // Quant
-            // 
-            this.Quant.HeaderText = "Quantity";
-            this.Quant.MinimumWidth = 6;
-            this.Quant.Name = "Quant";
-            this.Quant.ToolTipText = "Quantity of item";
-            this.Quant.Width = 125;
-            // 
-            // ExpDate
-            // 
-            this.ExpDate.HeaderText = "Exp. Date";
-            this.ExpDate.MinimumWidth = 6;
-            this.ExpDate.Name = "ExpDate";
-            this.ExpDate.ToolTipText = "Expiration date of item";
-            this.ExpDate.Width = 125;
-            // 
-            // Company
-            // 
-            this.Company.HeaderText = "Company";
-            this.Company.MinimumWidth = 6;
-            this.Company.Name = "Company";
-            this.Company.ToolTipText = "Manufacturer of item";
-            this.Company.Width = 125;
+            this.MedicineGridView.AllowUserToAddRows = false;
+            this.MedicineGridView.AllowUserToDeleteRows = false;
+            this.MedicineGridView.AllowUserToOrderColumns = true;
+            this.MedicineGridView.BackgroundColor = System.Drawing.Color.White;
+            this.MedicineGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.MedicineGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MedicineGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MedicineGridView.GridColor = System.Drawing.Color.DarkGray;
+            this.MedicineGridView.Location = new System.Drawing.Point(271, 10);
+            this.MedicineGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.MedicineGridView.Name = "MedicineGridView";
+            this.MedicineGridView.ReadOnly = true;
+            this.MedicineGridView.RowHeadersWidth = 51;
+            this.MedicineGridView.RowTemplate.Height = 24;
+            this.MedicineGridView.Size = new System.Drawing.Size(998, 526);
+            this.MedicineGridView.TabIndex = 2;
+            this.MedicineGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedicineGridView_CellContentClick);
             // 
             // ExpireDate
             // 
             this.ExpireDate.CalendarForeColor = System.Drawing.Color.DarkGreen;
             this.ExpireDate.CalendarTitleForeColor = System.Drawing.Color.DarkGreen;
             this.ExpireDate.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ExpireDate.Location = new System.Drawing.Point(15, 210);
+            this.ExpireDate.Location = new System.Drawing.Point(17, 409);
             this.ExpireDate.Margin = new System.Windows.Forms.Padding(2);
             this.ExpireDate.Name = "ExpireDate";
             this.ExpireDate.Size = new System.Drawing.Size(198, 19);
@@ -213,7 +159,7 @@
             "Emerald",
             "W. Corp.",
             "Wayne Pharmaceuticals"});
-            this.CompanySelect.Location = new System.Drawing.Point(15, 185);
+            this.CompanySelect.Location = new System.Drawing.Point(17, 349);
             this.CompanySelect.Margin = new System.Windows.Forms.Padding(2);
             this.CompanySelect.Name = "CompanySelect";
             this.CompanySelect.Size = new System.Drawing.Size(198, 21);
@@ -224,7 +170,7 @@
             this.Add.BackColor = System.Drawing.Color.Lime;
             this.Add.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.ForeColor = System.Drawing.Color.White;
-            this.Add.Location = new System.Drawing.Point(15, 392);
+            this.Add.Location = new System.Drawing.Point(17, 432);
             this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(90, 32);
@@ -238,20 +184,21 @@
             this.Update.BackColor = System.Drawing.Color.Lime;
             this.Update.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update.ForeColor = System.Drawing.Color.White;
-            this.Update.Location = new System.Drawing.Point(122, 392);
+            this.Update.Location = new System.Drawing.Point(125, 432);
             this.Update.Margin = new System.Windows.Forms.Padding(2);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(90, 32);
             this.Update.TabIndex = 5;
             this.Update.Text = "UPDATE";
             this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(15, 543);
+            this.Back.Location = new System.Drawing.Point(11, 542);
             this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(90, 32);
@@ -264,27 +211,106 @@
             this.Delete.BackColor = System.Drawing.Color.Red;
             this.Delete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.ForeColor = System.Drawing.Color.White;
-            this.Delete.Location = new System.Drawing.Point(15, 430);
+            this.Delete.Location = new System.Drawing.Point(1072, 543);
             this.Delete.Margin = new System.Windows.Forms.Padding(2);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(197, 32);
             this.Delete.TabIndex = 5;
             this.Delete.Text = "DELETE";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(15, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Medicine Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 18);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Buying Price";
+            this.label3.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(15, 194);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 18);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Selling Price";
+            this.label4.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(15, 263);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 18);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Quantity";
+            this.label5.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(15, 329);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 18);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Company Name";
+            this.label6.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(15, 389);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 18);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Expiration Date";
+            this.label7.Click += new System.EventHandler(this.label2_Click);
             // 
             // MedicineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1280, 585);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.CompanySelect);
             this.Controls.Add(this.ExpireDate);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MedicineGridView);
             this.Controls.Add(this.SellPrice);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.BuyPrice);
@@ -295,7 +321,8 @@
             this.Name = "MedicineForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedicineForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.MedicineForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.MedicineGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,18 +335,18 @@
         private System.Windows.Forms.TextBox BuyPrice;
         private System.Windows.Forms.TextBox Quantity;
         private System.Windows.Forms.TextBox SellPrice;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MedicineGridView;
         private System.Windows.Forms.DateTimePicker ExpireDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
         private System.Windows.Forms.ComboBox CompanySelect;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
