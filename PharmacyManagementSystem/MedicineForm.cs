@@ -39,6 +39,7 @@ namespace PharmacyManagementSystem
                 conn.Close();
             }
         }
+
         public MedicineForm()
         {
             InitializeComponent();
@@ -63,10 +64,12 @@ namespace PharmacyManagementSystem
 
         private void MedicineGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MedicineName.Text = MedicineGridView.SelectedRows[0].Cells[0].Value.ToString();
+            MedName.Text = MedicineGridView.SelectedRows[0].Cells[0].Value.ToString();
             BuyPrice.Text = MedicineGridView.SelectedRows[0].Cells[1].Value.ToString();
             SellPrice.Text = MedicineGridView.SelectedRows[0].Cells[2].Value.ToString();
-            Quantity.Text = MedicineGridView.SelectedRows[0].Cells[3].Value.ToString();
+            MedQty.Text = MedicineGridView.SelectedRows[0].Cells[3].Value.ToString();
+            Company.Text = MedicineGridView.SelectedRows[0].Cells[4].Value.ToString();
+            ExpDate.Text = MedicineGridView.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -74,11 +77,11 @@ namespace PharmacyManagementSystem
             
             if (MedicineFieldCheck() == true)
             {
-                string myQuery = "insert into Medicine_tbl values('" + MedicineName.Text + "', " + BuyPrice.Text + ", " + SellPrice.Text + ", " + Quantity.Text + ", '" + ExpireDate.Text + "', '" + CompanySelect.SelectedItem.ToString() + "')";
+                string myQuery = "insert into Medicine_tbl values('" + MedName.Text + "', " + BuyPrice.Text + ", " + SellPrice.Text + ", " + MedQty.Text + ", '" + ExpDate.Text + "', '" + Company.SelectedItem.ToString() + "')";
                 try
                 {
                     QueryExecution(myQuery);
-                    MessageBox.Show(MedicineName.Text + " Added.", "Success");
+                    MessageBox.Show(MedName.Text + " Added.", "Success");
                 }
                 catch
                 {
@@ -92,11 +95,11 @@ namespace PharmacyManagementSystem
         {
             if (MedicineFieldCheck() == true)
             {
-                string myQuery = "UPDATE Medicine_tbl SET BuyPrice = " + BuyPrice.Text + ", SellPrice = " + SellPrice.Text + ", MedQty = " + Quantity.Text + ", ExpDate = '" + ExpireDate.Text + "', Company = '" + CompanySelect.SelectedItem.ToString() + "' WHERE MedName='" + MedicineName.Text + "'";
+                string myQuery = "UPDATE Medicine_tbl SET BuyPrice = " + BuyPrice.Text + ", SellPrice = " + SellPrice.Text + ", MedQty = " + MedQty.Text + ", ExpDate = '" + ExpDate.Text + "', Company = '" + Company.SelectedItem.ToString() + "' WHERE MedName='" + MedName.Text + "'";
                 try
                 {
                     QueryExecution(myQuery);
-                    MessageBox.Show(MedicineName.Text + " Updated.", "Success");
+                    MessageBox.Show(MedName.Text + " Updated.", "Success");
                 }
                 catch
                 {
@@ -108,25 +111,65 @@ namespace PharmacyManagementSystem
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            string myQuery = "delete from Medicine_tbl WHERE MedName='" + MedicineName.Text + "'";
-            DialogResult dialogResult = MessageBox.Show("Are you sure you wish to delete " + MedicineName.Text + " ?", "Delete", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (MedicineFieldCheck() == true)
             {
-                try
+                string myQuery = "delete from Medicine_tbl WHERE MedName='" + MedName.Text + "'";
+                DialogResult dialogResult = MessageBox.Show("Are you sure you wish to delete " + MedName.Text + " ?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    QueryExecution(myQuery);
-                    MessageBox.Show(MedicineName.Text + " deleted.", "Success");
+                    try
+                    {
+                        QueryExecution(myQuery);
+                        MessageBox.Show(MedName.Text + " deleted.", "Success");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("An Error occurred while deleting Medicine item.");
+                        conn.Close();
+                    }
                 }
-                catch
+                else if (dialogResult == DialogResult.No)
                 {
-                    MessageBox.Show("An Error occurred while deleting Medicine item.");
                     conn.Close();
                 }
             }
-            else if (dialogResult == DialogResult.No)
-            {
-                conn.Close();
-            }
+        }
+        private void Search_Click(object sender, EventArgs e)
+        {
+            List<string> list = MedicineSearchCheck();
+            //string colName = list[0];
+            //string colValue = list[1];
+
+            //foreach (DataGridViewRow row in MedicineGridView.Rows)
+            //{
+            //    MessageBox.Show(row.Cells[0].ToString());
+            //    if (row.ToString().Contains(list[1]))
+            //    {
+            //        MedicineGridView.ClearSelection();
+            //        int indexOfRow = row.ToString().IndexOf(list[1]);
+            //        MedicineGridView.Rows[indexOfRow].Selected = true;
+            //        MessageBox.Show(colName + " Searched with: " + colValue);
+            //    }
+            //}
+
+
+            //foreach (DataGridViewTextBoxColumn column in MedicineGridView.Columns)
+            //{
+            //    if (list.Contains(column.Name))
+            //    {
+            //        DataGridViewRowCollection rows = MedicineGridView.Rows;
+            //        string colName = column.Name.ToString();
+            //        string colValue = list[1];
+
+            //            MedicineGridView.ClearSelection();
+            //            int indexOfRow = rows.IndexOf(colName);
+            //            MedicineGridView.Rows[indexOfCol].Selected = true;
+            //            MessageBox.Show(colName + " Searched with: " + colValue);
+
+            //        //MedicineGridView.Rows[1].Selected = true;
+            //        //MedicineGridView.SelectAll();
+            //    }
+            //}
         }
 
         private void QueryExecution(string query)
@@ -146,7 +189,7 @@ namespace PharmacyManagementSystem
         }
         private bool MedicineFieldCheck()
         {
-            if (MedicineName.Text == "" || BuyPrice.Text == "" || SellPrice.Text == "" || Quantity.Text == "" || ExpireDate.Text == "" || CompanySelect.SelectedItem == null)
+            if (MedName.Text == "" || BuyPrice.Text == "" || SellPrice.Text == "" || MedQty.Text == "" || ExpDate.Text == "" || Company.SelectedItem == null)
             {
                 MessageBox.Show("Missing Data, please fill in all the information.");
                 return false;
@@ -155,6 +198,46 @@ namespace PharmacyManagementSystem
             {
                 return true;
             }
+        }
+
+        private List<string> MedicineSearchCheck()
+        {
+            List<string> list = new List<string>();
+            if (MedName.Text != "")
+            {
+                list.Add(MedName.Name);
+                list.Add(MedName.Text);
+            }
+            else if (BuyPrice.Text != "")
+            {
+                list.Add(BuyPrice.Name);
+                list.Add(BuyPrice.Text);
+            }
+            else if (SellPrice.Text != "")
+            {
+                list.Add(SellPrice.Name);
+                list.Add(SellPrice.Text);
+            }
+            else if (MedQty.Text != "")
+            {
+                list.Add(MedQty.Name);
+                list.Add(MedQty.Text);
+            }
+            else if (ExpDate.Text != "")
+            {
+                list.Add(ExpDate.Name);
+                list.Add(ExpDate.Text);
+            }
+            else if (Company.SelectedItem != null)
+            {
+                list.Add(Company.SelectedItem.ToString());
+                list.Add(Company.SelectedItem.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Missing Data, please fill in any information.");
+            }
+            return list;
         }
     }
 }

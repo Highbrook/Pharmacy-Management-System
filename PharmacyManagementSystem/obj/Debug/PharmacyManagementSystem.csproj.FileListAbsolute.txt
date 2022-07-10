@@ -24,3 +24,4 @@ D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Deb
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.csproj.CoreCompileInputs.cache
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.exe
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.pdb
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Employees.resources
