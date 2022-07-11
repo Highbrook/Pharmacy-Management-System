@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 namespace PharmacyManagementSystem
 {
     public partial class Employees : Form
-    {   
+    {
         // laptop
         //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DL4QMRJ\SQLEXPRESS;Initial Catalog=Pharmacy_db;Integrated Security=True");
 
@@ -23,7 +23,7 @@ namespace PharmacyManagementSystem
             try
             {
                 conn.Open();
-                string myQyery = "select * from Employee_tbl";
+                string myQyery = "SELECT EmpID AS 'Employee ID', EmpName AS 'Employee Name', EmpSal AS 'Emplyee Salary', EmpAge AS 'Employee Age', EmpPhone AS 'Employee Phone', EmpGen AS 'Employee Gender' FROM Employee_tbl";
                 SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(myQyery, conn);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(mySqlDataAdapter);
                 var dataSet = new DataSet();
@@ -54,23 +54,16 @@ namespace PharmacyManagementSystem
             if (EmployeeFieldCheck() == true)
             {
                 //string myQuery = "INSERT INTO Employee_tbl VALUES('" + EmpID.Text + "', '" + EmpName.Text + "', '" + EmpSal.Text + "', '" + EmpAge.Text + "', '" + EmpPhone.Text + "', '" + EmpGen.SelectedItem.ToString() + "', HASHBYTES('SHA2_256'," + PasswordHash.Text +"));";
-                string myQuery = "INSERT INTO Employee_tbl VALUES('" + EmpID.Text + "', '" + EmpName.Text + "', '" + EmpSal.Text + "', '" + EmpAge.Text + "', '" + EmpPhone.Text + "', '" + EmpGen.SelectedItem.ToString() + "', '" + PasswordHash.Text +"');";
-                try
-                {
-                    QueryExecution(myQuery);
-                    MessageBox.Show(EmpName.Text + " Added.", "Success");
-                }
-                catch
-                {
-                    MessageBox.Show("An Error occurred while adding Medicine item.");
-                    conn.Close();
-                }
+                //string myQuery = "INSERT INTO Employee_tbl VALUES('" + EmpID.Text + "', '" + EmpName.Text + "', '" + EmpSal.Text + "', '" + EmpAge.Text + "', '" + EmpPhone.Text + "', '" + EmpGen.SelectedItem.ToString() + "', '" + PasswordHash.Text +"');";
+                string spName = @"dbo.spAddEmployee";
+                QueryExecutionAdd(spName);
             }
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-
+            string spName = @"dbo.spUpdateEmployee";
+            QueryExecutionUpdate(spName);
         }
 
         private void Search_Click(object sender, EventArgs e)
@@ -83,20 +76,57 @@ namespace PharmacyManagementSystem
 
         }
 
-        private void QueryExecution(string query)
+        private void QueryExecutionAdd(string query)
         {
-            try
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmployeeID", EmpID.Text);
+            cmd.Parameters.AddWithValue("@EmployeeName", EmpName.Text);
+            cmd.Parameters.AddWithValue("@EmployeeSalary", EmpSal.Text);
+            cmd.Parameters.AddWithValue("@EmployeeAge", EmpAge.Text);
+            cmd.Parameters.AddWithValue("@EmployeePhone", EmpPhone.Text);
+            cmd.Parameters.AddWithValue("@EmployeeGender", EmpGen.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@EmployeePasswordHash", PasswordHash.Text);
+            cmd.Parameters.AddWithValue("@ERR", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+            cmd.ExecuteNonQuery();
+            int errorMsg = int.Parse(cmd.Parameters["@ERR"].Value.ToString());
+            if (errorMsg == 0)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                populate();
+                MessageBox.Show("An Error occurred while updating Employee data.");
             }
-            catch
+            else
             {
-                conn.Close();
+                MessageBox.Show(EmpName.Text + " Updated.", "Success");
             }
+            conn.Close();
+            populate();
+        }
+
+        private void QueryExecutionUpdate(string query)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmployeeID", EmpID.Text);
+            cmd.Parameters.AddWithValue("@EmployeeName", EmpName.Text);
+            cmd.Parameters.AddWithValue("@EmployeeSalary", EmpSal.Text);
+            cmd.Parameters.AddWithValue("@EmployeeAge", EmpAge.Text);
+            cmd.Parameters.AddWithValue("@EmployeePhone", EmpPhone.Text);
+            cmd.Parameters.AddWithValue("@EmployeeGender", EmpGen.SelectedItem.ToString());
+            cmd.ExecuteNonQuery();
+            int errorMsg = (int)cmd.Parameters["@ERR"].Value;
+            MessageBox.Show(errorMsg.ToString());
+            if (errorMsg == 0)
+            {
+                MessageBox.Show("An Error occurred while updating Employee data.");
+            }
+            else
+            {
+                MessageBox.Show(EmpName.Text + " Updated.", "Success");
+            }
+            conn.Close();
+            populate();
         }
 
         private bool EmployeeFieldCheck()
@@ -120,7 +150,6 @@ namespace PharmacyManagementSystem
             EmpAge.Text = EmployeeGridView.SelectedRows[0].Cells[3].Value.ToString();
             EmpPhone.Text = EmployeeGridView.SelectedRows[0].Cells[4].Value.ToString();
             EmpGen.Text = EmployeeGridView.SelectedRows[0].Cells[5].Value.ToString();
-            PasswordHash.Text = EmployeeGridView.SelectedRows[0].Cells[6].Value.ToString();
         }
     }
 }
