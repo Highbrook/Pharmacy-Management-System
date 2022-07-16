@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Search = new System.Windows.Forms.Button();
             this.EmpGendLabel = new System.Windows.Forms.Label();
             this.EmpSalLabel = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.EmpPhoneLabel = new System.Windows.Forms.Label();
             this.PasswordHash = new System.Windows.Forms.TextBox();
             this.EmpPWLabel = new System.Windows.Forms.Label();
+            this.ClearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.Search.Location = new System.Drawing.Point(18, 505);
             this.Search.Margin = new System.Windows.Forms.Padding(2);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(198, 32);
+            this.Search.Size = new System.Drawing.Size(90, 32);
             this.Search.TabIndex = 24;
             this.Search.Text = "SEARCH";
             this.Search.UseVisualStyleBackColor = false;
@@ -201,23 +202,23 @@
             this.EmployeeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.EmployeeGridView.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeGridView.GridColor = System.Drawing.Color.DarkGray;
             this.EmployeeGridView.Location = new System.Drawing.Point(272, 11);
             this.EmployeeGridView.Margin = new System.Windows.Forms.Padding(2);
@@ -323,12 +324,27 @@
             this.EmpPWLabel.TabIndex = 22;
             this.EmpPWLabel.Text = "Employee Password";
             // 
+            // ClearBtn
+            // 
+            this.ClearBtn.BackColor = System.Drawing.Color.Lime;
+            this.ClearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.ForeColor = System.Drawing.Color.White;
+            this.ClearBtn.Location = new System.Drawing.Point(126, 505);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(90, 32);
+            this.ClearBtn.TabIndex = 25;
+            this.ClearBtn.Text = "CLEAR";
+            this.ClearBtn.UseVisualStyleBackColor = false;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1280, 585);
+            this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.EmpGendLabel);
             this.Controls.Add(this.EmpPWLabel);
@@ -384,5 +400,6 @@
         private System.Windows.Forms.Label EmpPhoneLabel;
         private System.Windows.Forms.TextBox PasswordHash;
         private System.Windows.Forms.Label EmpPWLabel;
+        private System.Windows.Forms.Button ClearBtn;
     }
 }

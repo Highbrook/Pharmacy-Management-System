@@ -13,9 +13,11 @@ namespace PharmacyManagementSystem
     public partial class Form1 : Form
     {
         int startPoint = 0;
-        public Form1()
+        int userID;
+        public Form1(int passedUserID)
         {
             InitializeComponent();
+            userID = passedUserID;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,7 +34,16 @@ namespace PharmacyManagementSystem
                 progressBar1.Value = 100;
                 timer1.Stop();
                 label2.Text = "Complete";
+
+                MainForm mainForm = new MainForm(userID);
+                this.Hide();
+                mainForm.Show();
             }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
