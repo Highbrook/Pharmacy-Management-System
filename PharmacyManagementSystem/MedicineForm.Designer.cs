@@ -199,13 +199,14 @@
             this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(11, 542);
+            this.Back.Location = new System.Drawing.Point(17, 543);
             this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(90, 32);
             this.Back.TabIndex = 5;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Delete
             // 
@@ -298,10 +299,10 @@
             this.Search.BackColor = System.Drawing.Color.Lime;
             this.Search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(18, 468);
+            this.Search.Location = new System.Drawing.Point(17, 468);
             this.Search.Margin = new System.Windows.Forms.Padding(2);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(197, 32);
+            this.Search.Size = new System.Drawing.Size(198, 32);
             this.Search.TabIndex = 7;
             this.Search.Text = "SEARCH";
             this.Search.UseVisualStyleBackColor = false;

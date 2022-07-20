@@ -33,29 +33,41 @@ namespace PharmacyManagementSystem
 
         private void QueryExecution(string query)
         {
-            conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Username", Username.Text);
             cmd.Parameters.AddWithValue("@Password", Password.Text);
             cmd.Parameters.AddWithValue("@Success", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
-            cmd.Parameters.AddWithValue("@ReturnedID", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
-            cmd.ExecuteNonQuery();
-            // TODO Fix this
-            int userID = int.Parse(cmd.Parameters["@ReturnedID"].Value.ToString());
-            int success = int.Parse(cmd.Parameters["@Success"].Value.ToString());
-            if (success == 1)
+            try
             {
-                this.errorText.Hide();
-                Form1 loadingPage = new Form1(userID);
-                this.Hide();
-                loadingPage.Show();
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                int success = int.Parse(cmd.Parameters["@Success"].Value.ToString());
+                if (success == 0)
+                {
+                    this.errorText.Show();
+                }
+                else if (success > 0)
+                {
+                    this.errorText.Hide();
+                    Form1 loadingPage = new Form1(success, conn);
+                    this.Hide();
+                    loadingPage.Show();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.errorText.Show();
+                MessageBox.Show(ex.Message);
             }
-            conn.Close();
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

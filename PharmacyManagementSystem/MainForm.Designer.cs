@@ -30,7 +30,7 @@
         {
             this.MedicineStockBtn = new System.Windows.Forms.Button();
             this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.Back = new System.Windows.Forms.Button();
+            this.LogoutBtn = new System.Windows.Forms.Button();
             this.WelcomeNameLabel = new System.Windows.Forms.Label();
             this.EmployeePageBtn = new System.Windows.Forms.Button();
             this.MedManufBtn = new System.Windows.Forms.Button();
@@ -63,25 +63,26 @@
             this.WelcomeLabel.TabIndex = 9;
             this.WelcomeLabel.Text = "Welcome";
             // 
-            // Back
+            // LogoutBtn
             // 
-            this.Back.BackColor = System.Drawing.Color.Red;
-            this.Back.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(11, 445);
-            this.Back.Margin = new System.Windows.Forms.Padding(2);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(90, 32);
-            this.Back.TabIndex = 11;
-            this.Back.Text = "Log Out";
-            this.Back.UseVisualStyleBackColor = false;
+            this.LogoutBtn.BackColor = System.Drawing.Color.Red;
+            this.LogoutBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutBtn.ForeColor = System.Drawing.Color.White;
+            this.LogoutBtn.Location = new System.Drawing.Point(11, 445);
+            this.LogoutBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(90, 32);
+            this.LogoutBtn.TabIndex = 11;
+            this.LogoutBtn.Text = "Log Out";
+            this.LogoutBtn.UseVisualStyleBackColor = false;
+            this.LogoutBtn.Click += new System.EventHandler(this.Back_Click);
             // 
             // WelcomeNameLabel
             // 
             this.WelcomeNameLabel.AutoSize = true;
             this.WelcomeNameLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeNameLabel.ForeColor = System.Drawing.Color.White;
-            this.WelcomeNameLabel.Location = new System.Drawing.Point(161, 9);
+            this.WelcomeNameLabel.Location = new System.Drawing.Point(153, 9);
             this.WelcomeNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WelcomeNameLabel.Name = "WelcomeNameLabel";
             this.WelcomeNameLabel.Size = new System.Drawing.Size(97, 37);
@@ -100,6 +101,7 @@
             this.EmployeePageBtn.TabIndex = 8;
             this.EmployeePageBtn.Text = "Employee Page";
             this.EmployeePageBtn.UseVisualStyleBackColor = false;
+            this.EmployeePageBtn.Click += new System.EventHandler(this.EmployeePageBtn_Click);
             // 
             // MedManufBtn
             // 
@@ -113,6 +115,7 @@
             this.MedManufBtn.TabIndex = 8;
             this.MedManufBtn.Text = "Medicine Manufacturers";
             this.MedManufBtn.UseVisualStyleBackColor = false;
+            this.MedManufBtn.Click += new System.EventHandler(this.MedManufBtn_Click);
             // 
             // OrderListBtn
             // 
@@ -126,6 +129,7 @@
             this.OrderListBtn.TabIndex = 8;
             this.OrderListBtn.Text = "Order List";
             this.OrderListBtn.UseVisualStyleBackColor = false;
+            this.OrderListBtn.Click += new System.EventHandler(this.OrderListBtn_Click);
             // 
             // MainForm
             // 
@@ -133,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(600, 488);
-            this.Controls.Add(this.Back);
+            this.Controls.Add(this.LogoutBtn);
             this.Controls.Add(this.WelcomeNameLabel);
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.MedManufBtn);
@@ -153,7 +157,7 @@
 
         private System.Windows.Forms.Button MedicineStockBtn;
         private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button LogoutBtn;
         private System.Windows.Forms.Label WelcomeNameLabel;
         private System.Windows.Forms.Button EmployeePageBtn;
         private System.Windows.Forms.Button MedManufBtn;

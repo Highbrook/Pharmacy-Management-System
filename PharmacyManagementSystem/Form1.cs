@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,12 @@ namespace PharmacyManagementSystem
     {
         int startPoint = 0;
         int userID;
-        public Form1(int passedUserID)
+        SqlConnection conn;
+        public Form1(int passedUserID, SqlConnection conn)
         {
             InitializeComponent();
-            userID = passedUserID;
+            this.userID = passedUserID;
+            this.conn = conn;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -26,7 +29,7 @@ namespace PharmacyManagementSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startPoint++;
+            startPoint += 5;
             progressBar1.Value = startPoint;
             label4.Text = startPoint + " %";
             if (progressBar1.Value == 100)
@@ -35,8 +38,8 @@ namespace PharmacyManagementSystem
                 timer1.Stop();
                 label2.Text = "Complete";
 
-                MainForm mainForm = new MainForm(userID);
                 this.Hide();
+                MainForm mainForm = new MainForm(this.userID, this.conn);
                 mainForm.Show();
             }
         }

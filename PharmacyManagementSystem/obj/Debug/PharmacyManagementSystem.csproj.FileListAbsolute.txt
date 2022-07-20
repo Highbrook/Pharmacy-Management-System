@@ -26,3 +26,5 @@ D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Deb
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.pdb
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.Employees.resources
 D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.MainForm.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.MedicineManufacturersForm.resources
+D:\UnityProjects\Git\Pharmacy-Management-System\PharmacyManagementSystem\obj\Debug\PharmacyManagementSystem.OrdersForm.resources

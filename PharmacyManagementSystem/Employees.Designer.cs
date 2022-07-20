@@ -150,6 +150,7 @@
             this.Back.TabIndex = 18;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Update
             // 

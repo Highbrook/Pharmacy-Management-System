@@ -13,17 +13,25 @@ namespace PharmacyManagementSystem
 {
     public partial class MedicineForm : Form
     {
-        // laptop
-        //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DL4QMRJ\SQLEXPRESS;Initial Catalog=Pharmacy_db;Integrated Security=True");
-        
-        // pc
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Highbrook\Documents\Pharmacy_db.mdf;Integrated Security=True;Connect Timeout=30");
-        
+        private int passedID;
+        private SqlConnection conn;
+        public MedicineForm(int userID, SqlConnection conn)
+        {
+            InitializeComponent();
+            this.passedID = userID;
+            this.conn = conn;
+        }
+
+        private void MedicineForm_Load(object sender, EventArgs e)
+        {
+            MedicineGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            populate();
+        }
         public void populate()
         {
             try
             {
-                conn.Open();
+                this.conn.Open();
                 string myQyery = "select * from Medicine_tbl";
                 SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(myQyery, conn);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(mySqlDataAdapter);
@@ -36,25 +44,14 @@ namespace PharmacyManagementSystem
             catch
             {
                 MessageBox.Show("An Error occurred while loading Medicine item");
-                conn.Close();
+                this.conn.Close();
             }
         }
 
-        public MedicineForm()
-        {
-            InitializeComponent();
-        }
 
         private void MedicineName_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-
-        private void MedicineForm_Load(object sender, EventArgs e)
-        {
-            MedicineGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            populate();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -176,15 +173,15 @@ namespace PharmacyManagementSystem
         {
             try
             {
-                conn.Open();
+                this.conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
-                conn.Close();
+                this.conn.Close();
                 populate();
             }
             catch
             {
-                conn.Close();
+                this.conn.Close();
             }
         }
         private bool MedicineFieldCheck()
@@ -238,6 +235,13 @@ namespace PharmacyManagementSystem
                 MessageBox.Show("Missing Data, please fill in any information.");
             }
             return list;
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainForm mainForm = new MainForm(passedID, conn);
+            mainForm.Show();
         }
     }
 }

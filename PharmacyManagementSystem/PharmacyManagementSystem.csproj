@@ -76,6 +76,18 @@
     <Compile Include="MedicineForm.Designer.cs">
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicineManufacturersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicineManufacturersForm.Designer.cs">
+      <DependentUpon>MedicineManufacturersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employees.resx">
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedicineForm.resx">
       <DependentUpon>MedicineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicineManufacturersForm.resx">
+      <DependentUpon>MedicineManufacturersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
