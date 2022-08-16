@@ -35,6 +35,7 @@
             this.EmployeePageBtn = new System.Windows.Forms.Button();
             this.MedManufBtn = new System.Windows.Forms.Button();
             this.OrderListBtn = new System.Windows.Forms.Button();
+            this.PerscriptionsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MedicineStockBtn
@@ -42,7 +43,7 @@
             this.MedicineStockBtn.BackColor = System.Drawing.Color.Lime;
             this.MedicineStockBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MedicineStockBtn.ForeColor = System.Drawing.Color.White;
-            this.MedicineStockBtn.Location = new System.Drawing.Point(108, 107);
+            this.MedicineStockBtn.Location = new System.Drawing.Point(108, 150);
             this.MedicineStockBtn.Margin = new System.Windows.Forms.Padding(2);
             this.MedicineStockBtn.Name = "MedicineStockBtn";
             this.MedicineStockBtn.Size = new System.Drawing.Size(399, 56);
@@ -94,7 +95,7 @@
             this.EmployeePageBtn.BackColor = System.Drawing.Color.Lime;
             this.EmployeePageBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeePageBtn.ForeColor = System.Drawing.Color.White;
-            this.EmployeePageBtn.Location = new System.Drawing.Point(108, 253);
+            this.EmployeePageBtn.Location = new System.Drawing.Point(108, 296);
             this.EmployeePageBtn.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeePageBtn.Name = "EmployeePageBtn";
             this.EmployeePageBtn.Size = new System.Drawing.Size(399, 56);
@@ -108,7 +109,7 @@
             this.MedManufBtn.BackColor = System.Drawing.Color.Lime;
             this.MedManufBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MedManufBtn.ForeColor = System.Drawing.Color.White;
-            this.MedManufBtn.Location = new System.Drawing.Point(108, 180);
+            this.MedManufBtn.Location = new System.Drawing.Point(108, 223);
             this.MedManufBtn.Margin = new System.Windows.Forms.Padding(2);
             this.MedManufBtn.Name = "MedManufBtn";
             this.MedManufBtn.Size = new System.Drawing.Size(399, 56);
@@ -122,7 +123,7 @@
             this.OrderListBtn.BackColor = System.Drawing.Color.Lime;
             this.OrderListBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderListBtn.ForeColor = System.Drawing.Color.White;
-            this.OrderListBtn.Location = new System.Drawing.Point(108, 324);
+            this.OrderListBtn.Location = new System.Drawing.Point(108, 367);
             this.OrderListBtn.Margin = new System.Windows.Forms.Padding(2);
             this.OrderListBtn.Name = "OrderListBtn";
             this.OrderListBtn.Size = new System.Drawing.Size(399, 56);
@@ -131,12 +132,27 @@
             this.OrderListBtn.UseVisualStyleBackColor = false;
             this.OrderListBtn.Click += new System.EventHandler(this.OrderListBtn_Click);
             // 
+            // PerscriptionsBtn
+            // 
+            this.PerscriptionsBtn.BackColor = System.Drawing.Color.Lime;
+            this.PerscriptionsBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PerscriptionsBtn.ForeColor = System.Drawing.Color.White;
+            this.PerscriptionsBtn.Location = new System.Drawing.Point(108, 78);
+            this.PerscriptionsBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.PerscriptionsBtn.Name = "PerscriptionsBtn";
+            this.PerscriptionsBtn.Size = new System.Drawing.Size(399, 56);
+            this.PerscriptionsBtn.TabIndex = 12;
+            this.PerscriptionsBtn.Text = "Perscriptions";
+            this.PerscriptionsBtn.UseVisualStyleBackColor = false;
+            this.PerscriptionsBtn.Click += new System.EventHandler(this.PerscriptionsBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(600, 488);
+            this.Controls.Add(this.PerscriptionsBtn);
             this.Controls.Add(this.LogoutBtn);
             this.Controls.Add(this.WelcomeNameLabel);
             this.Controls.Add(this.WelcomeLabel);
@@ -162,5 +178,6 @@
         private System.Windows.Forms.Button EmployeePageBtn;
         private System.Windows.Forms.Button MedManufBtn;
         private System.Windows.Forms.Button OrderListBtn;
+        private System.Windows.Forms.Button PerscriptionsBtn;
     }
 }

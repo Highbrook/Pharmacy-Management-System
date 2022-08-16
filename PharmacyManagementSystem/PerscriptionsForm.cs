@@ -11,20 +11,15 @@ using System.Windows.Forms;
 
 namespace PharmacyManagementSystem
 {
-    public partial class MedicineManufacturersForm : Form
+    public partial class PerscriptionsForm : Form
     {
         private int passedID;
         private SqlConnection conn;
-        public MedicineManufacturersForm(int userID, SqlConnection conn)
+        public PerscriptionsForm(int userID, SqlConnection conn)
         {
             InitializeComponent();
             this.passedID = userID;
-            this.conn = conn;
-        }
-
-        private void MedicineManufacturersForm_Load(object sender, EventArgs e)
-        {
-
+            this.conn = new SqlConnection(conn.ConnectionString);
         }
 
         private void Back_Click(object sender, EventArgs e)

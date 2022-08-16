@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.MedName = new System.Windows.Forms.TextBox();
             this.BuyPrice = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MedicineGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,23 +113,23 @@
             this.MedicineGridView.AllowUserToOrderColumns = true;
             this.MedicineGridView.BackgroundColor = System.Drawing.Color.White;
             this.MedicineGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.MedicineGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MedicineGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MedicineGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.MedicineGridView.GridColor = System.Drawing.Color.DarkGray;
             this.MedicineGridView.Location = new System.Drawing.Point(271, 10);
             this.MedicineGridView.Margin = new System.Windows.Forms.Padding(2);
@@ -171,7 +172,7 @@
             this.Add.BackColor = System.Drawing.Color.Lime;
             this.Add.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.ForeColor = System.Drawing.Color.White;
-            this.Add.Location = new System.Drawing.Point(17, 432);
+            this.Add.Location = new System.Drawing.Point(17, 468);
             this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(90, 32);
@@ -185,7 +186,7 @@
             this.Update.BackColor = System.Drawing.Color.Lime;
             this.Update.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update.ForeColor = System.Drawing.Color.White;
-            this.Update.Location = new System.Drawing.Point(125, 432);
+            this.Update.Location = new System.Drawing.Point(125, 468);
             this.Update.Margin = new System.Windows.Forms.Padding(2);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(90, 32);
@@ -299,14 +300,27 @@
             this.Search.BackColor = System.Drawing.Color.Lime;
             this.Search.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(17, 468);
+            this.Search.Location = new System.Drawing.Point(17, 504);
             this.Search.Margin = new System.Windows.Forms.Padding(2);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(198, 32);
+            this.Search.Size = new System.Drawing.Size(90, 32);
             this.Search.TabIndex = 7;
             this.Search.Text = "SEARCH";
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.BackColor = System.Drawing.Color.Lime;
+            this.ClearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.ForeColor = System.Drawing.Color.White;
+            this.ClearBtn.Location = new System.Drawing.Point(125, 504);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(90, 32);
+            this.ClearBtn.TabIndex = 30;
+            this.ClearBtn.Text = "CLEAR";
+            this.ClearBtn.UseVisualStyleBackColor = false;
             // 
             // MedicineForm
             // 
@@ -314,6 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1280, 585);
+            this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -366,5 +381,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button ClearBtn;
     }
 }

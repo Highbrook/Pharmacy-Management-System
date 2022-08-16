@@ -67,7 +67,7 @@ namespace PharmacyManagementSystem
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -82,5 +82,12 @@ namespace PharmacyManagementSystem
             OrdersForm ordersForm = new OrdersForm(passedID, conn);
             ordersForm.Show();
         }
+
+        private void PerscriptionsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PerscriptionsForm perscriptionsForm = new PerscriptionsForm(passedID, conn);
+            perscriptionsForm.Show();
+        }
     }
 }

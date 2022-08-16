@@ -26,5 +26,12 @@ namespace PharmacyManagementSystem
         {
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm(passedID, this.conn);
+            mainForm.Show();
+        }
     }
 }
